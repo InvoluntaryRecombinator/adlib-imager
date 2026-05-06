@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Mad Libs Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main-container">
+    <header class="card title-card">
+      <h2>Adlib Image Generator</h2>
+    </header>
+
+    <div class="template-row">
+      <button class="template-btn active" data-template="1">Template 1</button>
+      <button class="template-btn" data-template="2">Template 2</button>
+      <button class="template-btn" data-template="3">Template 3</button>
+    </div>
+
+    <div class="card form-card">
+      <form id="madlib-form">
+        <div id="dynamic-inputs" class="input-grid"></div>
+        <button type="submit" id="submit-btn">Generate Masterpiece</button>
+      </form>
+    </div>
+
+    <div class="card image-card">
+      <div id="loading-state" style="display: none;">Generating AI Image...</div>
+      <img id="result-image" src="" alt="Generated Artwork" style="display: none;">
+    </div>
+
+    <div class="card reveal-card">
+      <p>Try to guess the prompt based on the image!</p>
+      <div class="reveal-content">
+        <button type="button" id="reveal-btn" style="display: none;">Click to Reveal Prompt</button>
+        <p id="hidden-prompt-text" style="display: none;"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
